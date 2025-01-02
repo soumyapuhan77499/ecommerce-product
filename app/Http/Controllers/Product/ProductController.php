@@ -41,9 +41,9 @@ class ProductController extends Controller
                         ->get();
                         
         $customizedpps = FlowerProduct::where('status', 'active')
-                        ->where('category', 'Immediateproduct')
+                        ->where('category', 'Customizeproduct')
                         ->get();
-                      
+        
         return view("product/index", compact('upcomingPoojas', 'otherpoojas', 'products', 'banners','customizedpps'));
     }
 
