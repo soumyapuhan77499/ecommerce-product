@@ -9,8 +9,11 @@ class UserAddress extends Model
 {
     use HasFactory;
 
+    protected $table = 'user_addresses';
+
+
     protected $fillable = [
-        'address_type', 'area', 'city', 'state', 'pincode', 'country', 'default',
+        'user_id','address_type', 'area', 'city', 'state', 'pincode', 'country', 'default',
         'locality','apartment_name', 'place_category', 'apartment_flat_plot', 'landmark'
     ];
     

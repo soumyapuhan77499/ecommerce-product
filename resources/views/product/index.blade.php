@@ -230,7 +230,7 @@
     <div class="row" style="margin-top: 30px;">
       <div class="col-md-12">
         <div class="flower-package-heading">
-          <h1>Customized Flower</h1>
+          <h1>Customized Pooja Item</h1>
           <img src="{{ asset('front-assets/img/general/hr.png')}}" alt="" class="border-bottom-img">
         </div>
       

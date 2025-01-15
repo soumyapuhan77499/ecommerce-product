@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ProductOrder extends Model
 {
     use HasFactory;
+    
     protected $table = 'product__orders_details';
 
     protected $fillable = [
@@ -22,6 +23,7 @@ class ProductOrder extends Model
         'address_id',
         'suggestion'
     ];
+
     public function flowerRequest()
     {
         return $this->belongsTo(ProductRequest::class, 'request_id', 'request_id');
@@ -38,10 +40,12 @@ public function user()
 {
     return $this->belongsTo(User::class, 'user_id', 'userid');
 }
+
 public function flowerProduct()
 {
-    return $this->belongsTo(ProductOrder::class, 'product_id', 'product_id');
+    return $this->belongsTo(FlowerProduct::class, 'product_id', 'product_id');
 }
+
 public function address()
 {
     return $this->belongsTo(UserAddress::class, 'address_id');

@@ -32,10 +32,12 @@ class ProductController extends Controller
                         ->orderBy('pooja_date', 'asc')
                         ->take(3)
                         ->get();
+                        
         $otherpoojas = Poojalist::where('status', 'active')
                         ->whereNull('pooja_date')
                         ->take(9)
                         ->get();
+
         $products = FlowerProduct::where('status', 'active')
                         ->where('category', 'Package')
                         ->get();
